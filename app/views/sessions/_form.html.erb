@@ -1,0 +1,17 @@
+<%= form_with model: user, url: sessions_path do |f| %>
+
+  <div class="field" class="form-group">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, class:"form-control", placeholder: 'Enter username', autofocus: true %>
+  </div><br>
+
+  <div class="field" class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class:"form-control", placeholder: 'Enter password' %>
+  </div><br>
+
+  <div class="actions">
+    <%= f.submit "Sign In", class:"btn btn-sm btn-primary" %>
+    <%= link_to "Back", users_path, class:"btn btn-danger btn-sm" %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<% if @user.errors.any? %>
+  <hr>
+  <div class="alert alert-danger">
+    <h5><%= @user.errors.count %> errors found.</h5>
+    <ul>
+      <% @user.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
